@@ -1,0 +1,35 @@
+CREATE TABLE `Book_Table` (
+  `Class` mediumint default NULL,
+  `BookID` mediumint default NULL,
+  `Author_Last` varchar(255) default NULL,
+  `Price` mediumint default NULL
+);
+
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (101,1900,"Torres",180),(121,47499,"Maldonado",257),(104,30584,"Kidd",130),(104,50000,"Dejesus",14),(121,78786,"Moses",105),(120,11447,"Puckett",82),(103,35405,"Miranda",271),(100,31082,"Burton",173),(124,74985,"Le",59),(106,44773,"Rogers",223);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (101,41982,"Blankenship",144),(119,41259,"Bowers",60),(105,46224,"Cunningham",47),(119,67447,"Benson",79),(109,93171,"Baxter",261),(114,35639,"Guerra",94),(115,61189,"Stephenson",87),(103,57202,"Nunez",205),(114,1309,"Nixon",44),(111,49884,"Galloway",212);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (105,52718,"Mcdowell",183),(108,38427,"Boyle",199),(114,39298,"Kirkland",155),(125,55500,"Gray",13),(102,69411,"Hughes",168),(102,1981,"Watts",146),(108,77968,"Roth",28),(109,9733,"Dominguez",24),(125,17199,"Curtis",264),(107,22552,"Travis",300);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (114,39818,"Ramirez",289),(121,18539,"Alexander",45),(119,5887,"Dickson",111),(120,46904,"Miller",80),(107,28256,"Mcclain",232),(114,57753,"Carver",55),(111,13557,"Brennan",65),(105,6678,"Vincent",11),(104,5925,"Reid",192),(101,30876,"Fox",26);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (112,5022,"Waters",258),(120,91268,"Collier",281),(123,19540,"Howell",53),(102,40959,"Sargent",157),(113,39006,"Bullock",169),(114,87480,"Benson",170),(103,60607,"Pena",99),(124,62527,"Avila",233),(114,64148,"Bridges",52),(118,83326,"Bennett",93);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (101,80505,"Parker",13),(100,3343,"Le",259),(115,66776,"Serrano",249),(100,16232,"Stewart",262),(121,86324,"Mason",241),(100,69150,"Ortiz",206),(112,40737,"Spence",172),(106,11538,"Cole",72),(113,80364,"Buckner",140),(122,7482,"Stevens",240);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (105,20081,"Estes",263),(112,83891,"Osborn",251),(107,63933,"Stephenson",162),(122,82067,"Guerrero",35),(105,20099,"Browning",107),(119,50112,"Huffman",167),(111,65830,"Rodriquez",174),(118,42421,"Noble",159),(119,56055,"Franco",245),(120,16033,"Gallegos",130);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (117,9068,"Skinner",134),(118,64876,"Sparks",45),(125,6278,"Powell",67),(108,12104,"Henson",165),(121,82985,"Castaneda",162),(104,14423,"Randolph",238),(108,30128,"Aguirre",20),(107,20819,"Schmidt",137),(103,33986,"Bean",262),(107,64087,"Gilbert",63);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (109,44181,"Rasmussen",173),(108,14715,"Kramer",85),(111,34943,"Michael",299),(102,96862,"Pope",181),(111,93884,"Valentine",55),(124,25842,"Gonzales",153),(100,19095,"Boyd",118),(112,67906,"Grimes",11),(119,93941,"Hess",191),(117,88436,"Barker",68);
+INSERT INTO `Book_Table` (`Class`,`BookID`,`Author_Last`,`Price`) VALUES (112,33810,"Mercer",168),(113,26662,"Figueroa",130),(123,8343,"Neal",171),(117,92766,"Casey",51),(115,48738,"Short",296),(102,30542,"Mcfarland",80),(107,532,"Valencia",285),(107,89703,"Hahn",57),(112,52877,"Morrow",227),(113,81703,"Patton",205);
+
+
+CREATE TABLE `Class_Table` (
+  `Class` mediumint default NULL,
+  `ProfessorID` mediumint default NULL,
+  `Department` varchar(255) default NULL
+);
+
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (101,41," PHIL "),(121,30," PHIL "),(106,23," ECEE "),(104,26," CSCI "),(111,47," ECEE "),(114,9," PHIL "),(122,3," ECEE "),(102,13," CSCI "),(124,25,"RUSS "),(100,21," PHIL ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (125,33," ECEE "),(117,43," PHIL "),(103,38,"RUSS "),(117,24,"RUSS "),(119,3," ECEE "),(116,20," PHIL "),(119,28," PHIL "),(124,10,"RUSS "),(117,32," PHIL "),(101,45," CSCI ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (110,39," ECEE "),(120,9," CSCI "),(120,18," PHIL "),(111,36," ECEE "),(111,3," ECEE "),(116,18," ECEE "),(105,16," PHIL "),(103,22,"RUSS "),(112,21," CSCI "),(115,25,"RUSS ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (111,2," ECEE "),(104,12,"RUSS "),(107,2," ECEE "),(109,11," PHIL "),(108,22,"RUSS "),(124,37,"RUSS "),(110,30," ECEE "),(124,31," ECEE "),(113,5,"RUSS "),(104,8," ECEE ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (112,44,"RUSS "),(109,39," CSCI "),(122,28,"RUSS "),(123,48,"RUSS "),(110,9," CSCI "),(118,42," PHIL "),(114,11," PHIL "),(114,32," ECEE "),(101,3," CSCI "),(102,19," ECEE ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (111,39," PHIL "),(104,38,"RUSS "),(103,33," ECEE "),(103,48,"RUSS "),(106,3," ECEE "),(113,21," ECEE "),(105,34," CSCI "),(106,44," PHIL "),(117,37," ECEE "),(111,27," CSCI ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (108,15," ECEE "),(122,39," CSCI "),(111,38,"RUSS "),(105,9," ECEE "),(115,14," CSCI "),(108,11," CSCI "),(125,10," CSCI "),(106,28," ECEE "),(114,31," PHIL "),(125,41," CSCI ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (116,9,"RUSS "),(117,23,"RUSS "),(121,27," CSCI "),(112,13,"RUSS "),(120,14," ECEE "),(117,22," CSCI "),(114,15," ECEE "),(100,45,"RUSS "),(122,49," CSCI "),(118,18," PHIL ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (121,30," ECEE "),(107,29,"RUSS "),(116,26," PHIL "),(119,10," CSCI "),(121,40,"RUSS "),(125,20," CSCI "),(100,39," ECEE "),(102,19," CSCI "),(104,39," CSCI "),(117,33," CSCI ");
+INSERT INTO `Class_Table` (`Class`,`ProfessorID`,`Department`) VALUES (102,45," ECEE "),(110,36," ECEE "),(121,19," CSCI "),(109,33," CSCI "),(125,15," PHIL "),(125,48," ECEE "),(104,2," PHIL "),(112,13," PHIL "),(115,16,"RUSS "),(122,20," PHIL ");
