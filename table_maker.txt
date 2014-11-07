@@ -1,4 +1,4 @@
-CREATE TABLE `Book` (
+CREATE TABLE `Book_Info` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `class` mediumint default NULL,
   `bookid` mediumint default NULL,
@@ -6,55 +6,34 @@ CREATE TABLE `Book` (
   `price` mediumint default NULL
 );
 
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (101,1900,"Torres",180),(121,47499,"Maldonado",257),(104,30584,"Kidd",130),(104,50000,"Dejesus",14),(121,78786,"Moses",105),(120,11447,"Puckett",82),(103,35405,"Miranda",271),(100,31082,"Burton",173),(124,74985,"Le",59),(106,44773,"Rogers",223);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (101,41982,"Blankenship",144),(119,41259,"Bowers",60),(105,46224,"Cunningham",47),(119,67447,"Benson",79),(109,93171,"Baxter",261),(114,35639,"Guerra",94),(115,61189,"Stephenson",87),(103,57202,"Nunez",205),(114,1309,"Nixon",44),(111,49884,"Galloway",212);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (105,52718,"Mcdowell",183),(108,38427,"Boyle",199),(114,39298,"Kirkland",155),(125,55500,"Gray",13),(102,69411,"Hughes",168),(102,1981,"Watts",146),(108,77968,"Roth",28),(109,9733,"Dominguez",24),(125,17199,"Curtis",264),(107,22552,"Travis",300);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (114,39818,"Ramirez",289),(121,18539,"Alexander",45),(119,5887,"Dickson",111),(120,46904,"Miller",80),(107,28256,"Mcclain",232),(114,57753,"Carver",55),(111,13557,"Brennan",65),(105,6678,"Vincent",11),(104,5925,"Reid",192),(101,30876,"Fox",26);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (112,5022,"Waters",258),(120,91268,"Collier",281),(123,19540,"Howell",53),(102,40959,"Sargent",157),(113,39006,"Bullock",169),(114,87480,"Benson",170),(103,60607,"Pena",99),(124,62527,"Avila",233),(114,64148,"Bridges",52),(118,83326,"Bennett",93);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (101,80505,"Parker",13),(100,3343,"Le",259),(115,66776,"Serrano",249),(100,16232,"Stewart",262),(121,86324,"Mason",241),(100,69150,"Ortiz",206),(112,40737,"Spence",172),(106,11538,"Cole",72),(113,80364,"Buckner",140),(122,7482,"Stevens",240);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (105,20081,"Estes",263),(112,83891,"Osborn",251),(107,63933,"Stephenson",162),(122,82067,"Guerrero",35),(105,20099,"Browning",107),(119,50112,"Huffman",167),(111,65830,"Rodriquez",174),(118,42421,"Noble",159),(119,56055,"Franco",245),(120,16033,"Gallegos",130);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (117,9068,"Skinner",134),(118,64876,"Sparks",45),(125,6278,"Powell",67),(108,12104,"Henson",165),(121,82985,"Castaneda",162),(104,14423,"Randolph",238),(108,30128,"Aguirre",20),(107,20819,"Schmidt",137),(103,33986,"Bean",262),(107,64087,"Gilbert",63);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (109,44181,"Rasmussen",173),(108,14715,"Kramer",85),(111,34943,"Michael",299),(102,96862,"Pope",181),(111,93884,"Valentine",55),(124,25842,"Gonzales",153),(100,19095,"Boyd",118),(112,67906,"Grimes",11),(119,93941,"Hess",191),(117,88436,"Barker",68);
-INSERT INTO `Book_Table` (`class`,`bookid`,`author_last`,`price`) VALUES (112,33810,"Mercer",168),(113,26662,"Figueroa",130),(123,8343,"Neal",171),(117,92766,"Casey",51),(115,48738,"Short",296),(102,30542,"Mcfarland",80),(107,532,"Valencia",285),(107,89703,"Hahn",57),(112,52877,"Morrow",227),(113,81703,"Patton",205);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (101,1900,"Torres",180),(121,47499,"Maldonado",257),(104,30584,"Kidd",130),(104,50000,"Dejesus",14),(121,78786,"Moses",105),(120,11447,"Puckett",82),(103,35405,"Miranda",271),(100,31082,"Burton",173),(124,74985,"Le",59),(106,44773,"Rogers",223);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (101,41982,"Blankenship",144),(119,41259,"Bowers",60),(105,46224,"Cunningham",47),(119,67447,"Benson",79),(109,93171,"Baxter",261),(114,35639,"Guerra",94),(115,61189,"Stephenson",87),(103,57202,"Nunez",205),(114,1309,"Nixon",44),(111,49884,"Galloway",212);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (105,52718,"Mcdowell",183),(108,38427,"Boyle",199),(114,39298,"Kirkland",155),(125,55500,"Gray",13),(102,69411,"Hughes",168),(102,1981,"Watts",146),(108,77968,"Roth",28),(109,9733,"Dominguez",24),(125,17199,"Curtis",264),(107,22552,"Travis",300);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (114,39818,"Ramirez",289),(121,18539,"Alexander",45),(119,5887,"Dickson",111),(120,46904,"Miller",80),(107,28256,"Mcclain",232),(114,57753,"Carver",55),(111,13557,"Brennan",65),(105,6678,"Vincent",11),(104,5925,"Reid",192),(101,30876,"Fox",26);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (112,5022,"Waters",258),(120,91268,"Collier",281),(123,19540,"Howell",53),(102,40959,"Sargent",157),(113,39006,"Bullock",169),(114,87480,"Benson",170),(103,60607,"Pena",99),(124,62527,"Avila",233),(114,64148,"Bridges",52),(118,83326,"Bennett",93);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (101,80505,"Parker",13),(100,3343,"Le",259),(115,66776,"Serrano",249),(100,16232,"Stewart",262),(121,86324,"Mason",241),(100,69150,"Ortiz",206),(112,40737,"Spence",172),(106,11538,"Cole",72),(113,80364,"Buckner",140),(122,7482,"Stevens",240);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (105,20081,"Estes",263),(112,83891,"Osborn",251),(107,63933,"Stephenson",162),(122,82067,"Guerrero",35),(105,20099,"Browning",107),(119,50112,"Huffman",167),(111,65830,"Rodriquez",174),(118,42421,"Noble",159),(119,56055,"Franco",245),(120,16033,"Gallegos",130);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (117,9068,"Skinner",134),(118,64876,"Sparks",45),(125,6278,"Powell",67),(108,12104,"Henson",165),(121,82985,"Castaneda",162),(104,14423,"Randolph",238),(108,30128,"Aguirre",20),(107,20819,"Schmidt",137),(103,33986,"Bean",262),(107,64087,"Gilbert",63);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (109,44181,"Rasmussen",173),(108,14715,"Kramer",85),(111,34943,"Michael",299),(102,96862,"Pope",181),(111,93884,"Valentine",55),(124,25842,"Gonzales",153),(100,19095,"Boyd",118),(112,67906,"Grimes",11),(119,93941,"Hess",191),(117,88436,"Barker",68);
+INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (112,33810,"Mercer",168),(113,26662,"Figueroa",130),(123,8343,"Neal",171),(117,92766,"Casey",51),(115,48738,"Short",296),(102,30542,"Mcfarland",80),(107,532,"Valencia",285),(107,89703,"Hahn",57),(112,52877,"Morrow",227),(113,81703,"Patton",205);
 
-CREATE TABLE `Class` (
+CREATE TABLE `Class_Ratings` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `class` mediumint default NULL,
   `professorid` mediumint default NULL,
   `department` varchar(255) default NULL
 );
 
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (101,41,"PHIL"),(121,30,"PHIL"),(106,23,"ECEE"),(104,26,"CSCI"),(111,47,"ECEE"),(114,9,"PHIL"),(122,3,"ECEE"),(102,13,"CSCI"),(124,25,"RUSS"),(100,21,"PHIL");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (125,33,"ECEE"),(117,43,"PHIL"),(103,38,"RUSS"),(117,24,"RUSS"),(119,3,"ECEE"),(116,20,"PHIL"),(119,28,"PHIL"),(124,10,"RUSS"),(117,32,"PHIL"),(101,45,"CSCI");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (110,39,"ECEE"),(120,9,"CSCI"),(120,18,"PHIL"),(111,36,"ECEE"),(111,3,"ECEE"),(116,18,"ECEE"),(105,16,"PHIL"),(103,22,"RUSS"),(112,21,"CSCI"),(115,25,"RUSS");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (111,2,"ECEE"),(104,12,"RUSS"),(107,2,"ECEE"),(109,11,"PHIL"),(108,22,"RUSS"),(124,37,"RUSS"),(110,30,"ECEE"),(124,31,"ECEE"),(113,5,"RUSS"),(104,8,"ECEE");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (112,44,"RUSS"),(109,39,"CSCI"),(122,28,"RUSS"),(123,48,"RUSS"),(110,9,"CSCI"),(118,42,"PHIL"),(114,11,"PHIL"),(114,32,"ECEE"),(101,3,"CSCI"),(102,19,"ECEE");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (111,39,"PHIL"),(104,38,"RUSS"),(103,33,"ECEE"),(103,48,"RUSS"),(106,3,"ECEE"),(113,21,"ECEE"),(105,34,"CSCI"),(106,44,"PHIL"),(117,37,"ECEE"),(111,27,"CSCI");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (108,15,"ECEE"),(122,39,"CSCI"),(111,38,"RUSS"),(105,9,"ECEE"),(115,14,"CSCI"),(108,11,"CSCI"),(125,10,"CSCI"),(106,28,"ECEE"),(114,31,"PHIL"),(125,41,"CSCI");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (116,9,"RUSS"),(117,23,"RUSS"),(121,27,"CSCI"),(112,13,"RUSS"),(120,14,"ECEE"),(117,22,"CSCI"),(114,15,"ECEE"),(100,45,"RUSS"),(122,49,"CSCI"),(118,18,"PHIL");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (121,30,"ECEE"),(107,29,"RUSS"),(116,26,"PHIL"),(119,10,"CSCI"),(121,40,"RUSS"),(125,20,"CSCI"),(100,39,"ECEE"),(102,19,"CSCI"),(104,39,"CSCI"),(117,33,"CSCI");
-INSERT INTO `Class_Table` (`class`,`professorid`,`department`) VALUES (102,45,"ECEE"),(110,36,"ECEE"),(121,19,"CSCI"),(109,33,"CSCI"),(125,15,"PHIL"),(125,48,"ECEE"),(104,2,"PHIL"),(112,13,"PHIL"),(115,16,"RUSS"),(122,20,"PHIL");
-
-CREATE TABLE `Student_CC` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `studentid` varchar(255) default NULL,
-  `pan` varchar(255),
-  `pin` varchar(255),
-  `expire_date` varchar(255),
-  `security_code` mediumint default NULL,
-  PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
-
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Christopher Lyons",", , rand_card,","9842","06/15",561),("Sigourney Maynard",", , rand_card,","3965","12/13",431),("Phyllis Smith",", , rand_card,","9987","06/14",206),("Kylan Matthews",", , rand_card,","8295","05/15",216),("Yetta English",", , rand_card,","7426","11/14",263),("Regan Buck",", , rand_card,","2379","08/14",735),("Casey Middleton",", , rand_card,","9368","02/15",365),("Brynne Hogan",", , rand_card,","1679","06/14",228),("Wing Horton",", , rand_card,","4263","11/13",104),("Laura Wooten",", , rand_card,","8140","10/15",495);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Frances Carroll",", , rand_card,","7724","10/14",988),("Ralph Snider",", , rand_card,","6678","10/15",259),("Remedios Glenn",", , rand_card,","7573","04/14",776),("Cooper Gregory",", , rand_card,","1567","05/15",773),("Kaye Williams",", , rand_card,","4208","08/15",311),("Hector Valdez",", , rand_card,","6972","05/14",647),("Caryn Hester",", , rand_card,","2886","01/14",662),("Mallory Herman",", , rand_card,","7662","03/14",209),("Cynthia Kane",", , rand_card,","7032","08/14",961),("Piper Nieves",", , rand_card,","5100","04/14",67);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Jamalia Abbott",", , rand_card,","8885","10/15",624),("Xena Huber",", , rand_card,","1403","09/15",202),("Gil Phillips",", , rand_card,","4188","10/14",401),("Eugenia Forbes",", , rand_card,","7966","11/14",790),("Herrod Wood",", , rand_card,","1611","12/13",244),("Isabelle Reese",", , rand_card,","7617","03/15",328),("Cade Hubbard",", , rand_card,","6693","03/14",623),("Cade Wilkinson",", , rand_card,","7504","11/13",797),("Ariel Moore",", , rand_card,","4572","08/15",935),("Aristotle Reed",", , rand_card,","5031","05/14",186);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Paloma Jacobson",", , rand_card,","9845","09/14",239),("Rhea Kerr",", , rand_card,","8436","02/14",311),("Steven Vazquez",", , rand_card,","7632","11/14",25),("Beverly Brady",", , rand_card,","8448","07/15",491),("Hope Young",", , rand_card,","2876","03/14",170),("Wynne Hinton",", , rand_card,","3150","12/13",731),("Zachery Holt",", , rand_card,","9459","10/15",656),("Sean Mitchell",", , rand_card,","5049","06/14",522),("Velma Downs",", , rand_card,","4821","08/14",148),("Tucker Lowe",", , rand_card,","2518","03/15",164);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Barclay Nolan",", , rand_card,","6272","07/15",466),("Elton Chavez",", , rand_card,","9839","11/13",863),("Kirestin Scott",", , rand_card,","9102","11/13",636),("Cain Barry",", , rand_card,","8034","10/15",844),("Oleg Booth",", , rand_card,","3948","02/15",160),("Germaine Christensen",", , rand_card,","3606","11/14",28),("Rhiannon Soto",", , rand_card,","5613","05/14",129),("Orla Camacho",", , rand_card,","5642","01/15",767),("Bradley Compton",", , rand_card,","3088","03/14",58),("Reuben Wilkinson",", , rand_card,","5932","12/14",278);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Ayanna Wood",", , rand_card,","7674","04/15",772),("Madison Lopez",", , rand_card,","9862","07/15",148),("Neve Foley",", , rand_card,","7295","06/14",492),("Sophia Warren",", , rand_card,","9580","06/14",324),("Neville Townsend",", , rand_card,","4363","01/15",376),("David Bonner",", , rand_card,","5253","05/15",717),("Idona Mcdowell",", , rand_card,","2682","04/14",141),("McKenzie Lyons",", , rand_card,","6641","12/13",733),("Winifred Mendoza",", , rand_card,","9664","04/14",449),("Jason Weber",", , rand_card,","8316","05/15",417);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Maxine Waters",", , rand_card,","2385","10/15",943),("Britanni Moreno",", , rand_card,","3573","05/15",150),("Reese Bishop",", , rand_card,","4581","01/14",540),("Austin Adkins",", , rand_card,","1903","05/15",322),("Hall Humphrey",", , rand_card,","8086","08/15",938),("Cairo Bernard",", , rand_card,","8554","10/14",944),("Karina Harding",", , rand_card,","6112","03/14",535),("Stewart Gamble",", , rand_card,","4294","02/14",727),("Candice Anderson",", , rand_card,","7942","06/14",147),("Uta Armstrong",", , rand_card,","7488","03/15",623);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Lynn Carpenter",", , rand_card,","4625","02/14",353),("Hall Hodges",", , rand_card,","3617","05/15",351),("Rhea Welch",", , rand_card,","3887","06/14",854),("Keane Hale",", , rand_card,","7105","01/14",432),("Kirk Buckley",", , rand_card,","5688","10/15",692),("Yvonne Holcomb",", , rand_card,","2270","08/14",59),("Iola Dalton",", , rand_card,","6613","01/15",728),("Laurel Haney",", , rand_card,","8749","07/15",175),("Kiayada Baker",", , rand_card,","8740","12/14",296),("Akeem Maynard",", , rand_card,","4053","03/14",913);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Marcia Christian",", , rand_card,","2483","04/14",621),("Alan Neal",", , rand_card,","2235","10/15",315),("Mariam Kemp",", , rand_card,","9928","02/15",147),("Hedda Burton",", , rand_card,","1896","12/14",967),("James Lawson",", , rand_card,","4943","01/14",2),("Sasha Snider",", , rand_card,","2138","03/15",612),("Jane Camacho",", , rand_card,","3165","07/15",947),("Ezra Montgomery",", , rand_card,","3237","10/15",570),("Fuller Colon",", , rand_card,","3628","10/14",895),("Oprah Gregory",", , rand_card,","7768","03/14",858);
-INSERT INTO `Student_CC_Table` (`studentid`,`pan`,`pin`,`expire_date`,`security_code`) VALUES ("Steven Chan",", , rand_card,","9215","12/14",387),("Danielle Smith",", , rand_card,","2888","04/15",192),("Amethyst Colon",", , rand_card,","8959","11/14",612),("Holmes Cameron",", , rand_card,","3173","02/15",668),("Caldwell Doyle",", , rand_card,","5585","10/14",508),("Clayton Espinoza",", , rand_card,","2378","01/14",474),("Evelyn Frazier",", , rand_card,","7437","11/14",630),("Daria Waller",", , rand_card,","9594","10/14",731),("Echo Hanson",", , rand_card,","2927","10/15",384),("Risa Holland",", , rand_card,","5769","02/15",755);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (101,41,"PHIL"),(121,30,"PHIL"),(106,23,"ECEE"),(104,26,"CSCI"),(111,47,"ECEE"),(114,9,"PHIL"),(122,3,"ECEE"),(102,13,"CSCI"),(124,25,"RUSS"),(100,21,"PHIL");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (125,33,"ECEE"),(117,43,"PHIL"),(103,38,"RUSS"),(117,24,"RUSS"),(119,3,"ECEE"),(116,20,"PHIL"),(119,28,"PHIL"),(124,10,"RUSS"),(117,32,"PHIL"),(101,45,"CSCI");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (110,39,"ECEE"),(120,9,"CSCI"),(120,18,"PHIL"),(111,36,"ECEE"),(111,3,"ECEE"),(116,18,"ECEE"),(105,16,"PHIL"),(103,22,"RUSS"),(112,21,"CSCI"),(115,25,"RUSS");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,2,"ECEE"),(104,12,"RUSS"),(107,2,"ECEE"),(109,11,"PHIL"),(108,22,"RUSS"),(124,37,"RUSS"),(110,30,"ECEE"),(124,31,"ECEE"),(113,5,"RUSS"),(104,8,"ECEE");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (112,44,"RUSS"),(109,39,"CSCI"),(122,28,"RUSS"),(123,48,"RUSS"),(110,9,"CSCI"),(118,42,"PHIL"),(114,11,"PHIL"),(114,32,"ECEE"),(101,3,"CSCI"),(102,19,"ECEE");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,39,"PHIL"),(104,38,"RUSS"),(103,33,"ECEE"),(103,48,"RUSS"),(106,3,"ECEE"),(113,21,"ECEE"),(105,34,"CSCI"),(106,44,"PHIL"),(117,37,"ECEE"),(111,27,"CSCI");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (108,15,"ECEE"),(122,39,"CSCI"),(111,38,"RUSS"),(105,9,"ECEE"),(115,14,"CSCI"),(108,11,"CSCI"),(125,10,"CSCI"),(106,28,"ECEE"),(114,31,"PHIL"),(125,41,"CSCI");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (116,9,"RUSS"),(117,23,"RUSS"),(121,27,"CSCI"),(112,13,"RUSS"),(120,14,"ECEE"),(117,22,"CSCI"),(114,15,"ECEE"),(100,45,"RUSS"),(122,49,"CSCI"),(118,18,"PHIL");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (121,30,"ECEE"),(107,29,"RUSS"),(116,26,"PHIL"),(119,10,"CSCI"),(121,40,"RUSS"),(125,20,"CSCI"),(100,39,"ECEE"),(102,19,"CSCI"),(104,39,"CSCI"),(117,33,"CSCI");
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (102,45,"ECEE"),(110,36,"ECEE"),(121,19,"CSCI"),(109,33,"CSCI"),(125,15,"PHIL"),(125,48,"ECEE"),(104,2,"PHIL"),(112,13,"PHIL"),(115,16,"RUSS"),(122,20,"PHIL");
 
 CREATE TABLE `Construction_Plans` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
@@ -111,13 +90,40 @@ CREATE TABLE `major_table` (
 
 INSERT INTO `major_table` (`major`,`advisor`,`advisor_dept`) VALUES ("CSCI","Isabelle Gordon","CSCI"),("ECEE","Iona Hart","ECEE"),("ECEE","Colorado Mcintyre","ECEE"),("RUSS","Noble Mueller","RUSS"),("PHIL","Ryder Morrow","PHIL");
 
+CREATE TABLE `Class_Ratings` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `class` mediumint default NULL,
+  `department` varchar(255) default NULL,
+  `avg_respect` mediumint default NULL,
+  `avg_effectiveness` mediumint default NULL,
+  `avg_class_size` mediumint default NULL,
+  `avg_challenge` mediumint default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
 
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (88," PHIL",4,5,41,3),(80," PHIL",6,2,16,3),(115," PHIL",4,6,41,5),(54," ECEE ",3,4,18,6),(48," PHIL",1,2,18,5),(97," CSCI ",4,4,43,1),(110," CSCI ",5,3,12,4),(85,"RUSS ",3,3,34,4),(108," ECEE ",4,6,41,5),(13,"RUSS ",4,6,41,2);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (25,"RUSS ",6,2,41,3),(15," ECEE ",2,3,14,2),(28," ECEE ",6,2,27,1),(115," ECEE ",6,2,27,5),(105," CSCI ",5,6,43,5),(93," CSCI ",3,3,37,4),(90," CSCI ",6,6,16,5),(20,"RUSS ",2,4,36,4),(70," PHIL",5,6,46,4),(123," PHIL",3,6,22,3);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (30," CSCI ",5,2,45,5),(11," ECEE ",3,6,24,3),(110," CSCI ",5,1,40,1),(7,"RUSS ",6,6,23,6),(35,"RUSS ",2,2,39,4),(104,"RUSS ",5,1,21,4),(1," ECEE ",4,6,49,2),(38," PHIL",1,5,33,5),(73," PHIL",6,2,49,4),(68," PHIL",6,6,25,4);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (16," CSCI ",3,5,34,1),(36," ECEE ",4,2,13,2),(86," PHIL",5,6,48,5),(86," ECEE ",3,6,48,6),(71,"RUSS ",4,2,22,2),(76," PHIL",1,6,18,4),(94," CSCI ",1,6,20,5),(115,"RUSS ",1,5,16,2),(100," CSCI ",4,5,16,4),(79," ECEE ",2,6,11,3);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (84," CSCI ",6,3,48,3),(21," PHIL",2,5,41,3),(122," PHIL",3,2,41,5),(15,"RUSS ",1,3,11,1),(71,"RUSS ",1,6,42,6),(1," PHIL",5,4,21,6),(110," PHIL",3,6,11,6),(20," PHIL",4,3,30,1),(25," ECEE ",5,2,38,2),(66," ECEE ",2,6,15,2);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (94," ECEE ",4,3,26,2),(42," CSCI ",2,6,22,2),(90,"RUSS ",6,4,25,3),(68," CSCI ",4,2,47,5),(34,"RUSS ",4,2,33,2),(8,"RUSS ",2,3,41,5),(68," PHIL",3,1,32,4),(16," PHIL",2,4,42,5),(53,"RUSS ",3,3,12,3),(69," ECEE ",3,1,18,3);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (122,"RUSS ",4,4,17,5),(60," PHIL",3,6,45,5),(30," ECEE ",4,2,38,6),(90," ECEE ",5,2,41,4),(33," CSCI ",4,1,37,3),(29," ECEE ",5,4,27,2),(41," PHIL",2,4,37,1),(48," ECEE ",6,3,46,3),(17," ECEE ",6,4,45,5),(29," CSCI ",1,3,26,4);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (78,"RUSS ",2,2,48,4),(78,"RUSS ",3,3,47,3),(117," PHIL",6,6,25,6),(58," ECEE ",1,4,16,2),(113," ECEE ",6,1,43,2),(101," ECEE ",4,2,45,1),(109," CSCI ",1,5,18,5),(19," PHIL",2,2,38,1),(113," PHIL",6,1,44,3),(66,"RUSS ",4,2,45,1);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (77," CSCI ",2,4,40,4),(69,"RUSS ",6,5,25,4),(24," PHIL",3,3,21,6),(89,"RUSS ",2,1,19,3),(88," CSCI ",3,3,17,6),(11," PHIL",4,4,31,1),(20," CSCI ",6,3,48,4),(55," PHIL",2,2,29,6),(94," CSCI ",2,5,48,3),(55," PHIL",5,4,32,3);
+INSERT INTO `Class_Ratings` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (26," PHIL",1,3,45,5),(16,"RUSS ",6,5,20,5),(62," PHIL",1,6,26,2),(70," CSCI ",5,6,33,6),(9," PHIL",2,6,22,6),(79," PHIL",3,2,29,5),(44," ECEE ",6,5,14,6),(111," CSCI ",2,2,30,1),(98," PHIL",4,4,37,1),(58,"RUSS ",1,4,32,1);
 
+CREATE TABLE `Department_Ratings` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `Department` varchar(255) default NULL,
+  `avg_respect` mediumint default NULL,
+  `avg_class_size` mediumint default NULL,
+  `percent_passing_grades` mediumint default NULL,
+  `avg_interest` mediumint default NULL,
+  `freshman_dropout` mediumint default NULL,
+  `avg_challenge` mediumint default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
 
-
-
-
-
-
+INSERT INTO `Department_Info` (`Department`,`avg_respect`,`avg_class_size`,`percent_passing_grades`,`avg_interest`,`freshman_dropout`,`avg_challenge`) VALUES ("RUSS ",6,11,73,1,10,5),(" ECEE ",2,32,78,2,3,5),(" CSCI ",3,46,74,3,4,2),(" PHIL",1,33,98,1,11,4);
 
 
