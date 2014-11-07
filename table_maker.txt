@@ -80,9 +80,6 @@ INSERT INTO `Student_School_Sponsor` (`company`,`contact_name`,`phone`,`amount_d
 INSERT INTO `Student_School_Sponsor` (`company`,`contact_name`,`phone`,`amount_donated`,`sponsored_studentID`,`email`,`last_donation_date`) VALUES ("Quis Foundation","Xandra Joseph","(726) 402-6853",16748,8975,"magna.Praesent.interdum@massalobortisultrices.org","03/19/14"),("Elementum Dui Quis Ltd","Lynn Glenn","(738) 389-2132",80053,2614,"viverra.Donec@aliquetPhasellus.net","09/14/15"),("Sagittis Consulting","Genevieve Gonzalez","(657) 399-3602",27469,9320,"dolor.Fusce@Curabituregestas.net","05/15/15"),("Scelerisque Dui Suspendisse PC","Georgia Merrill","(239) 172-5170",71120,8201,"iaculis.nec@egetnisidictum.com","11/06/13"),("Ut Institute","Cody Lancaster","(400) 261-2272",74852,9137,"tincidunt@ametmetus.org","03/20/15"),("Sed Dolor Ltd","Roanna Graves","(484) 890-0265",59987,3786,"lacus.Mauris@egetodioAliquam.ca","11/20/13"),("Duis Gravida Praesent Institute","Winifred Serrano","(655) 296-7045",71592,2026,"eget.odio.Aliquam@gravidaPraesent.com","05/04/14"),("Ac LLP","Dennis Clemons","(444) 999-4646",51539,2562,"ac.ipsum@fringilla.edu","12/12/13"),("Donec Corporation","Haviva Rivers","(514) 597-5142",8732,9672,"Nam@condimentumDonecat.net","01/14/15"),("Hendrerit Ltd","Ashely Green","(666) 525-1658",77652,9610,"eu.lacus@iaculisquis.co.uk","08/16/14");
 INSERT INTO `Student_School_Sponsor` (`company`,`contact_name`,`phone`,`amount_donated`,`sponsored_studentID`,`email`,`last_donation_date`) VALUES ("Orci Tincidunt PC","Cyrus Phelps","(581) 677-2927",78630,3153,"tellus@tortordictum.edu","04/09/14"),("In Incorporated","Kelly Estes","(764) 384-3261",58710,138,"eget@ipsum.com","01/30/14"),("Consectetuer Adipiscing Elit Incorporated","Martha Mckenzie","(785) 838-3020",70187,2896,"Morbi.vehicula@mattisInteger.net","12/01/14"),("Sagittis Semper PC","Barrett Coffey","(884) 594-1786",48228,3971,"augue.scelerisque.mollis@anteblanditviverra.com","09/28/14"),("Aliquam Nisl Industries","Jeremy Kline","(940) 486-3067",95218,6463,"urna@Nunc.ca","12/12/13"),("Fringilla Ornare Institute","Sierra Buckner","(276) 722-8037",81986,8544,"lorem.luctus@rutrumloremac.edu","06/08/14"),("Sed Sapien Nunc Inc.","Oliver Blackburn","(280) 157-6661",1230,1079,"ac.ipsum.Phasellus@ipsumnon.edu","09/23/14"),("Sodales Incorporated","Imelda Hewitt","(383) 656-1644",55150,4717,"Aliquam@eu.ca","06/06/15"),("Risus Industries","Madison Roy","(333) 869-9145",30417,5313,"luctus.Curabitur@Crasegetnisi.net","07/12/14"),("Sagittis Placerat Cras LLC","Libby Waller","(186) 848-7576",31654,5756,"Donec.feugiat@felisullamcorper.co.uk","10/07/15");
 
-<<<<<<< HEAD
-CREATE TABLE `Major_Info` (
-=======
 CREATE TABLE `student_status` (
 `id` mediumint(8) unsigned NOT NULL auto_increment,
 `status` varchar(255) default NULL,
@@ -92,8 +89,7 @@ CREATE TABLE `student_status` (
 INSERT INTO `student_status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student")
 
 
-CREATE TABLE `major_table` (
->>>>>>> 6fc98c27c8247649df0462fe6c20f69d9a5055ce
+CREATE TABLE `Major_Info` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `major` varchar(255) default NULL,
   `advisor` varchar(255) default NULL,
