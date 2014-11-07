@@ -35,6 +35,17 @@ INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (116,9,"
 INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (121,30,"ECEE"),(107,29,"RUSS"),(116,26,"PHIL"),(119,10,"CSCI"),(121,40,"RUSS"),(125,20,"CSCI"),(100,39,"ECEE"),(102,19,"CSCI"),(104,39,"CSCI"),(117,33,"CSCI");
 INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (102,45,"ECEE"),(110,36,"ECEE"),(121,19,"CSCI"),(109,33,"CSCI"),(125,15,"PHIL"),(125,48,"ECEE"),(104,2,"PHIL"),(112,13,"PHIL"),(115,16,"RUSS"),(122,20,"PHIL");
 
+CREATE TABLE `Major_Advisor_Info` (
+  `id` mediumint(8) unsigned NOT NULL auto_increment,
+  `major` varchar(255) default NULL,
+  `advisor` varchar(255) default NULL,
+  `advisor_dept` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Major_Info` (`major`,`advisor`,`advisor_dept`) VALUES ("CSCI","Isabelle Gordon","CSCI"),("ECEE","Iona Hart","ECEE"),("ECEE","Colorado Mcintyre","ECEE"),("RUSS","Noble Mueller","RUSS"),("PHIL","Ryder Morrow","PHIL");
+
+
 CREATE TABLE `Construction_Plans` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `foreman` varchar(255) default NULL,
@@ -87,17 +98,6 @@ CREATE TABLE `student_status` (
 ) AUTO_INCREMENT=1;
 
 INSERT INTO `student_status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student")
-
-
-CREATE TABLE `Major_Info` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `major` varchar(255) default NULL,
-  `advisor` varchar(255) default NULL,
-  `advisor_dept` varchar(255) default NULL,
-  PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
-
-INSERT INTO `Major_Info` (`major`,`advisor`,`advisor_dept`) VALUES ("CSCI","Isabelle Gordon","CSCI"),("ECEE","Iona Hart","ECEE"),("ECEE","Colorado Mcintyre","ECEE"),("RUSS","Noble Mueller","RUSS"),("PHIL","Ryder Morrow","PHIL");
 
 CREATE TABLE `FCQs` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
