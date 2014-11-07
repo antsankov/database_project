@@ -3,8 +3,9 @@ CREATE TABLE `Book_Info` (
   `class` mediumint default NULL,
   `bookid` mediumint default NULL,
   `author_last` varchar(255) default NULL,
-  `price` mediumint default NULL
-);
+  `price` mediumint default NULL,
+   PRIMARY KEY (`id`)
+)AUTO_INCREMENT=1;
 
 INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (101,1900,"Torres",180),(121,47499,"Maldonado",257),(104,30584,"Kidd",130),(104,50000,"Dejesus",14),(121,78786,"Moses",105),(120,11447,"Puckett",82),(103,35405,"Miranda",271),(100,31082,"Burton",173),(124,74985,"Le",59),(106,44773,"Rogers",223);
 INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (101,41982,"Blankenship",144),(119,41259,"Bowers",60),(105,46224,"Cunningham",47),(119,67447,"Benson",79),(109,93171,"Baxter",261),(114,35639,"Guerra",94),(115,61189,"Stephenson",87),(103,57202,"Nunez",205),(114,1309,"Nixon",44),(111,49884,"Galloway",212);
@@ -21,8 +22,9 @@ CREATE TABLE `Class_Ratings` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `class` mediumint default NULL,
   `professorid` mediumint default NULL,
-  `department` varchar(255) default NULL
-);
+  `department` varchar(255) default NULL,
+   PRIMARY KEY (`id`)
+)AUTO_INCREMENT=1;
 
 INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (101,41,"PHIL"),(121,30,"PHIL"),(106,23,"ECEE"),(104,26,"CSCI"),(111,47,"ECEE"),(114,9,"PHIL"),(122,3,"ECEE"),(102,13,"CSCI"),(124,25,"RUSS"),(100,21,"PHIL");
 INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (125,33,"ECEE"),(117,43,"PHIL"),(103,38,"RUSS"),(117,24,"RUSS"),(119,3,"ECEE"),(116,20,"PHIL"),(119,28,"PHIL"),(124,10,"RUSS"),(117,32,"PHIL"),(101,45,"CSCI");
@@ -43,7 +45,7 @@ CREATE TABLE `Major_Advisor_Info` (
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
 
-INSERT INTO `Major_Info` (`major`,`advisor`,`advisor_dept`) VALUES ("CSCI","Isabelle Gordon","CSCI"),("ECEE","Iona Hart","ECEE"),("ECEE","Colorado Mcintyre","ECEE"),("RUSS","Noble Mueller","RUSS"),("PHIL","Ryder Morrow","PHIL");
+INSERT INTO `Major_Advisor_Info` (`major`,`advisor`,`advisor_dept`) VALUES ("CSCI","Isabelle Gordon","CSCI"),("ECEE","Iona Hart","ECEE"),("ECEE","Colorado Mcintyre","ECEE"),("RUSS","Noble Mueller","RUSS"),("PHIL","Ryder Morrow","PHIL");
 
 
 CREATE TABLE `Students` (
