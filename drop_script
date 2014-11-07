@@ -8,4 +8,4 @@ DROP TABLE `Student_School_Sponsor`;
 DROP TABLE `Construction_Plans`;
 DROP TABLE `Student_Status`;
 DROP TABLE `FCQs`;
-DROP TABLE `Department_FCQs';
+DROP TABLE `Department_FCQs`;

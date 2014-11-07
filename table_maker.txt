@@ -169,7 +169,7 @@ CREATE TABLE `Student_Status` (
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
 
-INSERT INTO `Student_Status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student")
+INSERT INTO `Student_Status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student");
 
 CREATE TABLE `FCQs` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
