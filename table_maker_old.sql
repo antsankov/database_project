@@ -171,6 +171,14 @@ CREATE TABLE `Student_Status` (
 
 INSERT INTO `Student_Status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student");
 
+CREATE TABLE `Departments` (
+`id` mediumint(8) unsigned NOT NULL auto_increment,
+`name` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB,AUTO_INCREMENT=1;
+INSERT INTO `Departments` (`name`) VALUES ("CSCI"),("RUSS"),("PHIL"),("ECEE");
+
+
 CREATE TABLE `FCQs` (
   `id` mediumint(8) unsigned NOT NULL auto_increment,
   `class` mediumint default NULL,

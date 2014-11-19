@@ -1,5 +1,50 @@
-CREATE TABLE `Book_Info` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+SHOW ENGINE INNODB STATUS;
+
+CREATE TABLE IF NOT EXISTS `Departments` (
+`id` mediumint NOT NULL auto_increment,
+`name` varchar(255) default NULL,
+  PRIMARY KEY (`id`)
+  #KEY `id` (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Departments` (`name`) VALUES ("CSCI"),("RUSS"),("PHIL"),("ECEE");
+
+CREATE TABLE IF NOT EXISTS `Class_TA` (
+  `id` mediumint NOT NULL auto_increment,
+  `class` mediumint default NULL,
+  `professor` varchar(255) default NULL,
+  `ta_1` varchar(255) default NULL,
+  `ta_2` varchar(255) default NULL,
+  `sections` mediumint default NULL,
+  `department` mediumint default NULL,
+  FOREIGN KEY (`department`) REFERENCES Departments(`id`),
+  PRIMARY KEY (`id`)
+) AUTO_INCREMENT=1;
+
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (123,"Katelyn Newman","Gavin Wyatt","Todd Brennan",2,2),(109,"Abraham Odom","Connor Castillo","Harriet Summers",2,1),(44,"Zenaida Obrien","Hall Vasquez","Carol Pearson",3,3),(23,"Erica Gardner","Joel Aguirre","Cadman Terrell",1,1),(18,"Samantha Higgins","Wesley Riggs","Grady Bailey",1,1),(105,"Anastasia Moody","Price Odonnell","Thor Sherman",2,1),(9,"Camden Anthony","Alexa Hahn","Dante Todd",1,4),(53,"Elmo Velez","Nasim Bridges","Howard Ingram",2,2),(87,"Britanni Webster","Quin Odom","Reuben Chan",3,4),(85,"Leroy Dickson","Leila Vinson","Olivia Phelps",2,2);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (84,"Talon Palmer","Maite Owens","Avye Rodgers",3,2),(74,"Samuel Ramsey","Hermione Dejesus","Julian Carney",1,2),(40,"Petra Rollins","Brett Joseph","Nell Holmes",1,3),(84,"Casey Mann","Blair Mcknight","Dane Greer",2,3),(25,"Arden Buck","Hector Vaughn","Kim Deleon",2,3),(88,"Jonas Browning","Ima Skinner","Xantha Jones",3,2),(27,"Aiko Hooper","Calista Griffin","Joan Madden",1,1),(103,"Kitra Jenkins","Yeo Winters","Joelle Bauer",1,4),(48,"Tatyana Morrison","Ignacia Bradley","Evelyn Reed",3,1),(117,"Tanisha Foster","Riley Bradford","Josiah Todd",3,1);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (20,"Amery Bolton","Macey Singleton","Boris Vincent",2,2),(100,"Craig Salas","Mary Ward","Hedy Mcmillan",1,1),(13,"Merrill Gillespie","Jorden Howard","Wanda Aguilar",2,4),(40,"Colt Mcbride","Jackson Gaines","Kameko Madden",2,3),(47,"Coby Espinoza","Ignacia Noble","Audra Moore",3,4),(45,"Wyatt Long","Kuame Dunlap","Len Adkins",2,3),(67,"Len Cummings","Carter Marshall","Hilel Phelps",3,2),(56,"Desirae Houston","Lars Gutierrez","Quintessa Cohen",1,4),(110,"Imogene Blake","Audrey Warren","Charde Weaver",1,3),(92,"Rose Ortiz","Oscar Hughes","Orson Mcdonald",2,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (6,"Rachel Santana","Ishmael Hayes","Phelan House",1,4),(115,"Cameran Booker","Laith Dotson","Geoffrey Griffin",2,2),(80,"Marny Hull","Nicholas Carrillo","Penelope Guzman",3,3),(31,"Kim Ramirez","Demetria Robinson","Colin Rowe",3,4),(58,"Courtney Hurst","Brianna Shields","Mollie Bond",3,4),(62,"Xander Hamilton","Natalie Kirk","Astra Sweeney",2,4),(110,"Levi Boyd","Heidi Miller","Cullen Velasquez",3,3),(57,"Mariam Williams","Brendan Gaines","Lucas Brock",1,4),(89,"Jana White","Vivian Perry","Fatima Erickson",2,4),(101,"Russell Mccullough","Brielle Huber","Keith Atkinson",3,1);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (83,"Merrill Boone","Ciara Wallace","Davis Warren",3,4),(48,"Philip Hays","Porter Wolf","Roth Chaney",1,3),(102,"Axel Rodriguez","Pascale Phelps","Zahir Marks",3,4),(80,"Karly Castaneda","Grant Monroe","Raja Ellis",3,2),(125,"Silas Baldwin","Dennis Ryan","Rachel Barber",2,2),(124,"Zephr Branch","Daquan Conner","Eugenia Reid",3,1),(90,"Margaret Sparks","TaShya Gray","Dieter Chase",1,1),(82,"Althea Haynes","Samson Holloway","Wilma Cherry",2,3),(19,"Sage Baker","Baker Sanders","Nadine Boone",1,3),(4,"Tana Whitney","Libby Clements","Olga Grant",1,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (85,"Tate Cervantes","Fay Miller","Preston Wagner",3,3),(3,"Mara Sweet","Sage Obrien","Germaine Meyer",3,2),(3,"Nora Santos","Tucker Romero","Wang Camacho",1,2),(2,"Gary Dudley","Imelda Donaldson","Whilemina Blankenship",1,3),(95,"Nina Fuller","Tatiana Farley","Janna Hansen",3,4),(87,"Sydney Solomon","Camden Dejesus","Kyra Marquez",3,2),(84,"Ingrid Sweet","Eliana Velasquez","Stella Wallace",2,1),(82,"Jillian Palmer","Sharon Franco","Dora Stein",3,4),(10,"Deacon Dalton","Allen Peterson","Athena Dillard",1,2),(66,"Stephen Copeland","Pandora Reeves","Stewart Stanton",1,2);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (110,"Dante Booth","Halee Copeland","Oleg Castro",1,4),(16,"Ishmael Chandler","Macey English","Uriah Vega",2,2),(110,"Cheryl Conner","Danielle Calhoun","Regina Hayden",1,1),(19,"Piper Buckley","Allegra Fuller","Maite Harrell",3,4),(113,"Jolie Griffin","Connor Best","Zephr Velazquez",3,4),(87,"Eden Bailey","Katell Whitley","Herrod Wiley",1,4),(12,"Aristotle Berger","Tanner Dickerson","Glenna Byrd",3,1),(121,"Felicia Hall","Kaye Chavez","Shaine Morgan",3,4),(83,"Catherine Flynn","Hedley Mcfadden","Joan Estes",3,3),(62,"Kimberly West","Quentin Vincent","Ashton Crawford",3,3);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (61,"Erich Huffman","Garrett Sweet","Priscilla Bradshaw",1,1),(9,"April Cantu","Amena Harvey","Jamal Huff",2,3),(101,"Macey Chambers","Kuame Madden","Cynthia Byrd",3,2),(59,"Magee Petersen","Josephine Gibson","Christian Mercer",1,2),(61,"Chandler Bonner","Gregory Rodgers","Alexa Yates",3,1),(44,"Garrett Shannon","Bruno Gibbs","Jaime Decker",3,1),(31,"Gannon Collins","Burke Mccall","Kelly Galloway",3,3),(58,"Selma Carlson","Wesley Nash","Nina Walters",2,4),(34,"Elijah Schroeder","Paki Vincent","Mariko Adams",1,2),(24,"Zorita Solis","Gary Fischer","Samuel Gilliam",2,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (34,"Melissa Solis","Demetria Cotton","Bree Wooten",2,3),(89,"Thane Crosby","Keiko Gallegos","Maia Shepherd",3,3),(4,"Kellie Dean","Cody Hess","Ethan Henson",1,4),(104,"Kirby Holt","Kyle Crosby","Brendan Wilson",2,2),(105,"Tad Montgomery","Uriah May","Germaine Carr",3,3),(76,"Michelle Carver","Marah Richards","Hillary Guzman",2,2),(23,"Donna Petersen","Nigel Summers","Lars Sharpe",1,3),(106,"Lara Barrera","Hayley Nicholson","Orla Michael",1,2),(81,"Knox Wolfe","Keane Hayden","Ezra Leblanc",2,3),(28,"Sylvia Knapp","Uma Bentley","Brian Pennington",2,3);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (79,"Yeo Frederick","Rina Rush","Nadine Phelps",1,3),(113,"Nathaniel Leach","Hu Hopkins","Britanni Mejia",2,4),(66,"April Hernandez","Shelley Adams","Chelsea Snow",3,3),(27,"Allistair Marshall","Chester Gillespie","Kaden Noel",1,2),(119,"Colin Rosales","Adria Merritt","Iola Schroeder",3,2),(53,"Kane Morin","Marcia Chen","Jaden Kidd",1,1),(125,"Yoshio Flores","Nicholas Bonner","Shea Blevins",1,2),(94,"Martena Moran","Camden Keith","Coby Hernandez",2,3),(110,"Cruz Humphrey","Mufutau Wiggins","Jeanette Zamora",3,1),(43,"Kevyn Trevino","Otto Rosa","Hedley Lindsey",2,2);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (123,"Katelyn Newman","Gavin Wyatt","Todd Brennan",2,2),(109,"Abraham Odom","Connor Castillo","Harriet Summers",2,1),(44,"Zenaida Obrien","Hall Vasquez","Carol Pearson",3,3),(23,"Erica Gardner","Joel Aguirre","Cadman Terrell",1,1),(18,"Samantha Higgins","Wesley Riggs","Grady Bailey",1,1),(105,"Anastasia Moody","Price Odonnell","Thor Sherman",2,1),(9,"Camden Anthony","Alexa Hahn","Dante Todd",1,4),(53,"Elmo Velez","Nasim Bridges","Howard Ingram",2,2),(87,"Britanni Webster","Quin Odom","Reuben Chan",3,4),(85,"Leroy Dickson","Leila Vinson","Olivia Phelps",2,2);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (84,"Talon Palmer","Maite Owens","Avye Rodgers",3,2),(74,"Samuel Ramsey","Hermione Dejesus","Julian Carney",1,2),(40,"Petra Rollins","Brett Joseph","Nell Holmes",1,3),(84,"Casey Mann","Blair Mcknight","Dane Greer",2,3),(25,"Arden Buck","Hector Vaughn","Kim Deleon",2,3),(88,"Jonas Browning","Ima Skinner","Xantha Jones",3,2),(27,"Aiko Hooper","Calista Griffin","Joan Madden",1,1),(103,"Kitra Jenkins","Yeo Winters","Joelle Bauer",1,4),(48,"Tatyana Morrison","Ignacia Bradley","Evelyn Reed",3,1),(117,"Tanisha Foster","Riley Bradford","Josiah Todd",3,1);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (20,"Amery Bolton","Macey Singleton","Boris Vincent",2,2),(100,"Craig Salas","Mary Ward","Hedy Mcmillan",1,1),(13,"Merrill Gillespie","Jorden Howard","Wanda Aguilar",2,4),(40,"Colt Mcbride","Jackson Gaines","Kameko Madden",2,3),(47,"Coby Espinoza","Ignacia Noble","Audra Moore",3,4),(45,"Wyatt Long","Kuame Dunlap","Len Adkins",2,3),(67,"Len Cummings","Carter Marshall","Hilel Phelps",3,2),(56,"Desirae Houston","Lars Gutierrez","Quintessa Cohen",1,4),(110,"Imogene Blake","Audrey Warren","Charde Weaver",1,3),(92,"Rose Ortiz","Oscar Hughes","Orson Mcdonald",2,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (6,"Rachel Santana","Ishmael Hayes","Phelan House",1,4),(115,"Cameran Booker","Laith Dotson","Geoffrey Griffin",2,2),(80,"Marny Hull","Nicholas Carrillo","Penelope Guzman",3,3),(31,"Kim Ramirez","Demetria Robinson","Colin Rowe",3,4),(58,"Courtney Hurst","Brianna Shields","Mollie Bond",3,4),(62,"Xander Hamilton","Natalie Kirk","Astra Sweeney",2,4),(110,"Levi Boyd","Heidi Miller","Cullen Velasquez",3,3),(57,"Mariam Williams","Brendan Gaines","Lucas Brock",1,4),(89,"Jana White","Vivian Perry","Fatima Erickson",2,4),(101,"Russell Mccullough","Brielle Huber","Keith Atkinson",3,1);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (83,"Merrill Boone","Ciara Wallace","Davis Warren",3,4),(48,"Philip Hays","Porter Wolf","Roth Chaney",1,3),(102,"Axel Rodriguez","Pascale Phelps","Zahir Marks",3,4),(80,"Karly Castaneda","Grant Monroe","Raja Ellis",3,2),(125,"Silas Baldwin","Dennis Ryan","Rachel Barber",2,2),(124,"Zephr Branch","Daquan Conner","Eugenia Reid",3,1),(90,"Margaret Sparks","TaShya Gray","Dieter Chase",1,1),(82,"Althea Haynes","Samson Holloway","Wilma Cherry",2,3),(19,"Sage Baker","Baker Sanders","Nadine Boone",1,3),(4,"Tana Whitney","Libby Clements","Olga Grant",1,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (85,"Tate Cervantes","Fay Miller","Preston Wagner",3,3),(3,"Mara Sweet","Sage Obrien","Germaine Meyer",3,2),(3,"Nora Santos","Tucker Romero","Wang Camacho",1,2),(2,"Gary Dudley","Imelda Donaldson","Whilemina Blankenship",1,3),(95,"Nina Fuller","Tatiana Farley","Janna Hansen",3,4),(87,"Sydney Solomon","Camden Dejesus","Kyra Marquez",3,2),(84,"Ingrid Sweet","Eliana Velasquez","Stella Wallace",2,1),(82,"Jillian Palmer","Sharon Franco","Dora Stein",3,4),(10,"Deacon Dalton","Allen Peterson","Athena Dillard",1,2),(66,"Stephen Copeland","Pandora Reeves","Stewart Stanton",1,2);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (110,"Dante Booth","Halee Copeland","Oleg Castro",1,4),(16,"Ishmael Chandler","Macey English","Uriah Vega",2,2),(110,"Cheryl Conner","Danielle Calhoun","Regina Hayden",1,1),(19,"Piper Buckley","Allegra Fuller","Maite Harrell",3,4),(113,"Jolie Griffin","Connor Best","Zephr Velazquez",3,4),(87,"Eden Bailey","Katell Whitley","Herrod Wiley",1,4),(12,"Aristotle Berger","Tanner Dickerson","Glenna Byrd",3,1),(121,"Felicia Hall","Kaye Chavez","Shaine Morgan",3,4),(83,"Catherine Flynn","Hedley Mcfadden","Joan Estes",3,3),(62,"Kimberly West","Quentin Vincent","Ashton Crawford",3,3);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (61,"Erich Huffman","Garrett Sweet","Priscilla Bradshaw",1,1),(9,"April Cantu","Amena Harvey","Jamal Huff",2,3),(101,"Macey Chambers","Kuame Madden","Cynthia Byrd",3,2),(59,"Magee Petersen","Josephine Gibson","Christian Mercer",1,2),(61,"Chandler Bonner","Gregory Rodgers","Alexa Yates",3,1),(44,"Garrett Shannon","Bruno Gibbs","Jaime Decker",3,1),(31,"Gannon Collins","Burke Mccall","Kelly Galloway",3,3),(58,"Selma Carlson","Wesley Nash","Nina Walters",2,4),(34,"Elijah Schroeder","Paki Vincent","Mariko Adams",1,2),(24,"Zorita Solis","Gary Fischer","Samuel Gilliam",2,4);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (34,"Melissa Solis","Demetria Cotton","Bree Wooten",2,3),(89,"Thane Crosby","Keiko Gallegos","Maia Shepherd",3,3),(4,"Kellie Dean","Cody Hess","Ethan Henson",1,4),(104,"Kirby Holt","Kyle Crosby","Brendan Wilson",2,2),(105,"Tad Montgomery","Uriah May","Germaine Carr",3,3),(76,"Michelle Carver","Marah Richards","Hillary Guzman",2,2),(23,"Donna Petersen","Nigel Summers","Lars Sharpe",1,3),(106,"Lara Barrera","Hayley Nicholson","Orla Michael",1,2),(81,"Knox Wolfe","Keane Hayden","Ezra Leblanc",2,3),(28,"Sylvia Knapp","Uma Bentley","Brian Pennington",2,3);
+INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (79,"Yeo Frederick","Rina Rush","Nadine Phelps",1,3),(113,"Nathaniel Leach","Hu Hopkins","Britanni Mejia",2,4),(66,"April Hernandez","Shelley Adams","Chelsea Snow",3,3),(27,"Allistair Marshall","Chester Gillespie","Kaden Noel",1,2),(119,"Colin Rosales","Adria Merritt","Iola Schroeder",3,2),(53,"Kane Morin","Marcia Chen","Jaden Kidd",1,1),(125,"Yoshio Flores","Nicholas Bonner","Shea Blevins",1,2),(94,"Martena Moran","Camden Keith","Coby Hernandez",2,3),(110,"Cruz Humphrey","Mufutau Wiggins","Jeanette Zamora",3,1),(43,"Kevyn Trevino","Otto Rosa","Hedley Lindsey",2,2);
+
+
+CREATE TABLE IF NOT EXISTS `Book_Info` (
+  `id` mediumint NOT NULL auto_increment,
   `class` mediumint default NULL,
   `bookid` mediumint default NULL,
   `author_last` varchar(255) default NULL,
@@ -19,30 +64,8 @@ INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (117,906
 INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (109,44181,"Rasmussen",173),(108,14715,"Kramer",85),(111,34943,"Michael",299),(102,96862,"Pope",181),(111,93884,"Valentine",55),(124,25842,"Gonzales",153),(100,19095,"Boyd",118),(112,67906,"Grimes",11),(119,93941,"Hess",191),(117,88436,"Barker",68);
 INSERT INTO `Book_Info` (`class`,`bookid`,`author_last`,`price`) VALUES (112,33810,"Mercer",168),(113,26662,"Figueroa",130),(123,8343,"Neal",171),(117,92766,"Casey",51),(115,48738,"Short",296),(102,30542,"Mcfarland",80),(107,532,"Valencia",285),(107,89703,"Hahn",57),(112,52877,"Morrow",227),(113,81703,"Patton",205);
 
-CREATE TABLE `Class_Ratings` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `class` mediumint default NULL,
-  `professorid` mediumint default NULL,
-  `department` mediumint default NULL,
-  FOREIGN KEY (`department`) REFERENCES Departments(`id`),
-  FOREIGN KEY (`class`) REFERENCES Class_TA(`id`),
-  FOREIGN KEY (`professorid`) REFERENCES Professors(`id`),
-  PRIMARY KEY (`id`)
-)AUTO_INCREMENT=1;
-
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (101,41,3),(121,30,3),(106,23,4),(104,26,1),(111,47,4),(114,9,3),(122,3,4),(102,13,1),(124,25,2),(100,21,3);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (125,33,4),(117,43,3),(103,38,2),(117,24,2),(119,3,4),(116,20,3),(119,28,3),(124,10,2),(117,32,3),(101,45,1);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (110,39,4),(120,9,1),(120,18,3),(111,36,4),(111,3,4),(116,18,4),(105,16,3),(103,22,2),(112,21,1),(115,25,2);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,2,4),(104,12,2),(107,2,4),(109,11,3),(108,22,2),(124,37,2),(110,30,4),(124,31,4),(113,5,2),(104,8,4);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (112,44,2),(109,39,1),(122,28,2),(123,48,2),(110,9,1),(118,42,3),(114,11,3),(114,32,4),(101,3,1),(102,19,4);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,39,3),(104,38,2),(103,33,4),(103,48,2),(106,3,4),(113,21,4),(105,34,1),(106,44,3),(117,37,4),(111,27,1);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (108,15,4),(122,39,1),(111,38,2),(105,9,4),(115,14,1),(108,11,1),(125,10,1),(106,28,4),(114,31,3),(125,41,1);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (116,9,2),(117,23,2),(121,27,1),(112,13,2),(120,14,4),(117,22,1),(114,15,4),(100,45,2),(122,49,1),(118,18,3);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (121,30,4),(107,29,2),(116,26,3),(119,10,1),(121,40,2),(125,20,1),(100,39,4),(102,19,1),(104,39,1),(117,33,1);
-INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (102,45,4),(110,36,4),(121,19,1),(109,33,1),(125,15,3),(125,48,4),(104,2,3),(112,13,3),(115,16,2),(122,20,3);
-
-CREATE TABLE `Major_Advisor_Info` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Major_Advisor_Info` (
+  `id` mediumint NOT NULL auto_increment,
   `major` varchar(255) default NULL,
   `advisor` varchar(255) default NULL,
   `advisor_dept` varchar(255) default NULL,
@@ -52,8 +75,8 @@ CREATE TABLE `Major_Advisor_Info` (
 INSERT INTO `Major_Advisor_Info` (`major`,`advisor`,`advisor_dept`) VALUES (1,"Isabelle Gordon",1),(4,"Iona Hart",4),(4,"Colorado Mcintyre",4),(2,"Noble Mueller",2),(3,"Ryder Morrow",3);
 
 
-CREATE TABLE `Students` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Students` (
+  `id` mediumint NOT NULL auto_increment,
   `fname` varchar(255) default NULL,
   `lname` varchar(255) default NULL,
   `major` mediumint default NULL,
@@ -75,31 +98,10 @@ INSERT INTO `Students` (`fname`,`lname`,`major`,`minor`,`status`,`gpa`) VALUES (
 INSERT INTO `Students` (`fname`,`lname`,`major`,`minor`,`status`,`gpa`) VALUES ("Melyssa","Beck",1,1,4,"2.6120084802915"),("Hope","Combs",2,2,1,"2.5865418477201"),("Zephania","Bond",3,3,3,"2.7188143925343"),("Kameko","Day",4,3,1,"2.8880977013808"),("Norman","Bray",4,4,4,"2.926435307014"),("Anjolie","Gonzales",1,2,5,"2.9669273678632"),("Daryl","Love",4,2,3,"3.037706790847"),("Leslie","Kramer",1,2,4,"3.1825274986768"),("Montana","Fitzpatrick",1,4,2,"2.585040974745"),("Elizabeth","Goff",1,1,1,"2.8859592186367");
 
 
-CREATE TABLE `Class_TA` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
-  `class` mediumint default NULL,
-  `professor` varchar(255) default NULL,
-  `ta_1` varchar(255) default NULL,
-  `ta_2` varchar(255) default NULL,
-  `sections` mediumint default NULL,
-  `department` mediumint default NULL,
-  FOREIGN KEY (`department`) REFERENCES Departments(`id`),
-  PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
 
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (123,"Katelyn Newman","Gavin Wyatt","Todd Brennan",2,2),(109,"Abraham Odom","Connor Castillo","Harriet Summers",2,1),(44,"Zenaida Obrien","Hall Vasquez","Carol Pearson",3,3),(23,"Erica Gardner","Joel Aguirre","Cadman Terrell",1,1),(18,"Samantha Higgins","Wesley Riggs","Grady Bailey",1,1),(105,"Anastasia Moody","Price Odonnell","Thor Sherman",2,1),(9,"Camden Anthony","Alexa Hahn","Dante Todd",1,4),(53,"Elmo Velez","Nasim Bridges","Howard Ingram",2,2),(87,"Britanni Webster","Quin Odom","Reuben Chan",3,4),(85,"Leroy Dickson","Leila Vinson","Olivia Phelps",2,2);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (84,"Talon Palmer","Maite Owens","Avye Rodgers",3,2),(74,"Samuel Ramsey","Hermione Dejesus","Julian Carney",1,2),(40,"Petra Rollins","Brett Joseph","Nell Holmes",1,3),(84,"Casey Mann","Blair Mcknight","Dane Greer",2,3),(25,"Arden Buck","Hector Vaughn","Kim Deleon",2,3),(88,"Jonas Browning","Ima Skinner","Xantha Jones",3,2),(27,"Aiko Hooper","Calista Griffin","Joan Madden",1,1),(103,"Kitra Jenkins","Yeo Winters","Joelle Bauer",1,4),(48,"Tatyana Morrison","Ignacia Bradley","Evelyn Reed",3,1),(117,"Tanisha Foster","Riley Bradford","Josiah Todd",3,1);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (20,"Amery Bolton","Macey Singleton","Boris Vincent",2,2),(100,"Craig Salas","Mary Ward","Hedy Mcmillan",1,1),(13,"Merrill Gillespie","Jorden Howard","Wanda Aguilar",2,4),(40,"Colt Mcbride","Jackson Gaines","Kameko Madden",2,3),(47,"Coby Espinoza","Ignacia Noble","Audra Moore",3,4),(45,"Wyatt Long","Kuame Dunlap","Len Adkins",2,3),(67,"Len Cummings","Carter Marshall","Hilel Phelps",3,2),(56,"Desirae Houston","Lars Gutierrez","Quintessa Cohen",1,4),(110,"Imogene Blake","Audrey Warren","Charde Weaver",1,3),(92,"Rose Ortiz","Oscar Hughes","Orson Mcdonald",2,4);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (6,"Rachel Santana","Ishmael Hayes","Phelan House",1,4),(115,"Cameran Booker","Laith Dotson","Geoffrey Griffin",2,2),(80,"Marny Hull","Nicholas Carrillo","Penelope Guzman",3,3),(31,"Kim Ramirez","Demetria Robinson","Colin Rowe",3,4),(58,"Courtney Hurst","Brianna Shields","Mollie Bond",3,4),(62,"Xander Hamilton","Natalie Kirk","Astra Sweeney",2,4),(110,"Levi Boyd","Heidi Miller","Cullen Velasquez",3,3),(57,"Mariam Williams","Brendan Gaines","Lucas Brock",1,4),(89,"Jana White","Vivian Perry","Fatima Erickson",2,4),(101,"Russell Mccullough","Brielle Huber","Keith Atkinson",3,1);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (83,"Merrill Boone","Ciara Wallace","Davis Warren",3,4),(48,"Philip Hays","Porter Wolf","Roth Chaney",1,3),(102,"Axel Rodriguez","Pascale Phelps","Zahir Marks",3,4),(80,"Karly Castaneda","Grant Monroe","Raja Ellis",3,2),(125,"Silas Baldwin","Dennis Ryan","Rachel Barber",2,2),(124,"Zephr Branch","Daquan Conner","Eugenia Reid",3,1),(90,"Margaret Sparks","TaShya Gray","Dieter Chase",1,1),(82,"Althea Haynes","Samson Holloway","Wilma Cherry",2,3),(19,"Sage Baker","Baker Sanders","Nadine Boone",1,3),(4,"Tana Whitney","Libby Clements","Olga Grant",1,4);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (85,"Tate Cervantes","Fay Miller","Preston Wagner",3,3),(3,"Mara Sweet","Sage Obrien","Germaine Meyer",3,2),(3,"Nora Santos","Tucker Romero","Wang Camacho",1,2),(2,"Gary Dudley","Imelda Donaldson","Whilemina Blankenship",1,3),(95,"Nina Fuller","Tatiana Farley","Janna Hansen",3,4),(87,"Sydney Solomon","Camden Dejesus","Kyra Marquez",3,2),(84,"Ingrid Sweet","Eliana Velasquez","Stella Wallace",2,1),(82,"Jillian Palmer","Sharon Franco","Dora Stein",3,4),(10,"Deacon Dalton","Allen Peterson","Athena Dillard",1,2),(66,"Stephen Copeland","Pandora Reeves","Stewart Stanton",1,2);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (110,"Dante Booth","Halee Copeland","Oleg Castro",1,4),(16,"Ishmael Chandler","Macey English","Uriah Vega",2,2),(110,"Cheryl Conner","Danielle Calhoun","Regina Hayden",1,1),(19,"Piper Buckley","Allegra Fuller","Maite Harrell",3,4),(113,"Jolie Griffin","Connor Best","Zephr Velazquez",3,4),(87,"Eden Bailey","Katell Whitley","Herrod Wiley",1,4),(12,"Aristotle Berger","Tanner Dickerson","Glenna Byrd",3,1),(121,"Felicia Hall","Kaye Chavez","Shaine Morgan",3,4),(83,"Catherine Flynn","Hedley Mcfadden","Joan Estes",3,3),(62,"Kimberly West","Quentin Vincent","Ashton Crawford",3,3);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (61,"Erich Huffman","Garrett Sweet","Priscilla Bradshaw",1,1),(9,"April Cantu","Amena Harvey","Jamal Huff",2,3),(101,"Macey Chambers","Kuame Madden","Cynthia Byrd",3,2),(59,"Magee Petersen","Josephine Gibson","Christian Mercer",1,2),(61,"Chandler Bonner","Gregory Rodgers","Alexa Yates",3,1),(44,"Garrett Shannon","Bruno Gibbs","Jaime Decker",3,1),(31,"Gannon Collins","Burke Mccall","Kelly Galloway",3,3),(58,"Selma Carlson","Wesley Nash","Nina Walters",2,4),(34,"Elijah Schroeder","Paki Vincent","Mariko Adams",1,2),(24,"Zorita Solis","Gary Fischer","Samuel Gilliam",2,4);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (34,"Melissa Solis","Demetria Cotton","Bree Wooten",2,3),(89,"Thane Crosby","Keiko Gallegos","Maia Shepherd",3,3),(4,"Kellie Dean","Cody Hess","Ethan Henson",1,4),(104,"Kirby Holt","Kyle Crosby","Brendan Wilson",2,2),(105,"Tad Montgomery","Uriah May","Germaine Carr",3,3),(76,"Michelle Carver","Marah Richards","Hillary Guzman",2,2),(23,"Donna Petersen","Nigel Summers","Lars Sharpe",1,3),(106,"Lara Barrera","Hayley Nicholson","Orla Michael",1,2),(81,"Knox Wolfe","Keane Hayden","Ezra Leblanc",2,3),(28,"Sylvia Knapp","Uma Bentley","Brian Pennington",2,3);
-INSERT INTO `Class_TA` (`class`,`professor`,`ta_1`,`ta_2`,`sections`,`department`) VALUES (79,"Yeo Frederick","Rina Rush","Nadine Phelps",1,3),(113,"Nathaniel Leach","Hu Hopkins","Britanni Mejia",2,4),(66,"April Hernandez","Shelley Adams","Chelsea Snow",3,3),(27,"Allistair Marshall","Chester Gillespie","Kaden Noel",1,2),(119,"Colin Rosales","Adria Merritt","Iola Schroeder",3,2),(53,"Kane Morin","Marcia Chen","Jaden Kidd",1,1),(125,"Yoshio Flores","Nicholas Bonner","Shea Blevins",1,2),(94,"Martena Moran","Camden Keith","Coby Hernandez",2,3),(110,"Cruz Humphrey","Mufutau Wiggins","Jeanette Zamora",3,1),(43,"Kevyn Trevino","Otto Rosa","Hedley Lindsey",2,2);
 
-CREATE TABLE `Professors` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Professors` (
+  `id` mediumint NOT NULL auto_increment,
   `fname` varchar(255) default NULL,
   `lname` varchar(255) default NULL,
   `department` mediumint default NULL,
@@ -122,8 +124,8 @@ INSERT INTO `Professors` (`fname`,`lname`,`department`,`papers_published`,`tenur
 INSERT INTO `Professors` (`fname`,`lname`,`department`,`papers_published`,`tenure`,`classes_taught`) VALUES ("Imogene","Ortega",2,0,1,16),("Colby","Howell",1,1,0,4),("Laurel","Bright",2,1,0,6),("Jameson","Pugh",3,0,1,6),("Nadine","Garcia",3,3,0,7),("Matthew","Mathews",4,3,1,15),("Sharon","Dickerson",3,6,0,8),("Rigel","Davenport",3,1,0,1),("Irma","Nelson",4,4,1,8),("Lana","Obrien",1,5,0,8);
 
 
-CREATE TABLE `Student_School_Sponsor` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Student_School_Sponsor` (
+  `id` mediumint NOT NULL auto_increment,
   `company` varchar(255),
   `contact_name` varchar(255) default NULL,
   `phone` varchar(100) default NULL,
@@ -146,8 +148,8 @@ INSERT INTO `Student_School_Sponsor` (`company`,`contact_name`,`phone`,`amount_d
 INSERT INTO `Student_School_Sponsor` (`company`,`contact_name`,`phone`,`amount_donated`,`sponsored_studentID`,`email`,`last_donation_date`) VALUES ("Orci Tincidunt PC","Cyrus Phelps","(581) 677-2927",78630,3153,"tellus@tortordictum.edu","04/09/14"),("In Incorporated","Kelly Estes","(764) 384-3261",58710,138,"eget@ipsum.com","01/30/14"),("Consectetuer Adipiscing Elit Incorporated","Martha Mckenzie","(785) 838-3020",70187,2896,"Morbi.vehicula@mattisInteger.net","12/01/14"),("Sagittis Semper PC","Barrett Coffey","(884) 594-1786",48228,3971,"augue.scelerisque.mollis@anteblanditviverra.com","09/28/14"),("Aliquam Nisl Industries","Jeremy Kline","(940) 486-3067",95218,6463,"urna@Nunc.ca","12/12/13"),("Fringilla Ornare Institute","Sierra Buckner","(276) 722-8037",81986,8544,"lorem.luctus@rutrumloremac.edu","06/08/14"),("Sed Sapien Nunc Inc.","Oliver Blackburn","(280) 157-6661",1230,1079,"ac.ipsum.Phasellus@ipsumnon.edu","09/23/14"),("Sodales Incorporated","Imelda Hewitt","(383) 656-1644",55150,4717,"Aliquam@eu.ca","06/06/15"),("Risus Industries","Madison Roy","(333) 869-9145",30417,5313,"luctus.Curabitur@Crasegetnisi.net","07/12/14"),("Sagittis Placerat Cras LLC","Libby Waller","(186) 848-7576",31654,5756,"Donec.feugiat@felisullamcorper.co.uk","10/07/15");
 
 
-CREATE TABLE `Construction_Plans` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Construction_Plans` (
+  `id` mediumint NOT NULL auto_increment,
   `foreman` varchar(255) default NULL,
   `company` varchar(255),
   `address` varchar(255) default NULL,
@@ -169,24 +171,18 @@ INSERT INTO `Construction_Plans` (`foreman`,`company`,`address`,`coordinates`,`c
 INSERT INTO `Construction_Plans` (`foreman`,`company`,`address`,`coordinates`,`current_build_cost`,`projected_build_cost`) VALUES ("Meredith Farley","Pellentesque PC","P.O. Box 574, 2151 Feugiat Avenue","-19.57148, 155.86958",140130,83700),("Karly Stuart","Tristique Foundation","Ap #820-160 Vestibulum Av.","62.56034, -2.10274",111711,147961),("Nasim Bartlett","Egestas Lacinia Associates","Ap #138-7785 Ipsum. Av.","7.92751, 172.83336",208537,224799),("Harlan Acevedo","In Foundation","P.O. Box 797, 7843 Magna. Rd.","-80.45926, 73.85677",98167,161124),("Ava Faulkner","Sed Dolor Limited","668 Posuere Rd.","-44.1517, -108.25636",89380,120251),("Ginger Watts","At PC","Ap #243-4085 Luctus. Ave","-74.48598, 64.05986",262591,339976),("Jakeem Zimmerman","Dictum Cursus Nunc Corporation","380-1827 Velit St.","-20.95127, 102.81863",311589,296731),("Shafira Cummings","Interdum Enim Industries","2896 Sed Avenue","-23.31619, -56.92343",227438,327939),("Bianca Spencer","Risus Varius Industries","Ap #728-5607 Orci Ave","74.35902, -131.6685",231110,63219),("Amir Hubbard","A Mi Associates","628-586 Lacus. Rd.","-70.98652, -115.17773",73307,397994);
 
 
-CREATE TABLE `Student_Status` (
-`id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Student_Status` (
+`id` mediumint NOT NULL auto_increment,
 `status` varchar(255) default NULL,
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
 
 INSERT INTO `Student_Status` (`status`) VALUES ("Freshman"),("Sophomore"),("Junior"),("Senior"),("Grad_Student");
 
-CREATE TABLE `Departments` (
-`id` mediumint(8) unsigned NOT NULL auto_increment,
-`name` varchar(255) default NULL,
-  PRIMARY KEY (`id`)
-) AUTO_INCREMENT=1;
 
-INSERT INTO `Departments` (`name`) VALUES ("CSCI"),("RUSS"),("PHIL"),("ECEE");
 
-CREATE TABLE `FCQs` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `FCQs` (
+  `id` mediumint NOT NULL auto_increment,
   `class` mediumint default NULL,
   `department` mediumint default NULL,
   `avg_respect` mediumint default NULL,
@@ -209,8 +205,8 @@ INSERT INTO `FCQs` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_
 INSERT INTO `FCQs` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (77,1,2,4,40,4),(69,2,6,5,25,4),(24,3,3,3,21,6),(89,2,2,1,19,3),(88,1,3,3,17,6),(11,3,4,4,31,1),(20,1,6,3,48,4),(55,3,2,2,29,6),(94,1,2,5,48,3),(55,3,5,4,32,3);
 INSERT INTO `FCQs` (`class`,`department`,`avg_respect`,`avg_effectiveness`,`avg_class_size`,`avg_challenge`) VALUES (26,3,1,3,45,5),(16,2,6,5,20,5),(62,3,1,6,26,2),(70,1,5,6,33,6),(9,3,2,6,22,6),(79,3,3,2,29,5),(44,4,6,5,14,6),(111,1,2,2,30,1),(98,3,4,4,37,1),(58,2,1,4,32,1);
 
-CREATE TABLE `Department_FCQs` (
-  `id` mediumint(8) unsigned NOT NULL auto_increment,
+CREATE TABLE IF NOT EXISTS `Department_FCQs` (
+  `id` mediumint NOT NULL auto_increment,
   `department` mediumint default NULL,
   `avg_respect` mediumint default NULL,
   `avg_class_size` mediumint default NULL,
@@ -224,3 +220,24 @@ CREATE TABLE `Department_FCQs` (
 
 INSERT INTO `Department_FCQs` (`department`,`avg_respect`,`avg_class_size`,`percent_passing_grades`,`avg_interest`,`freshman_dropout`,`avg_challenge`) VALUES (2,6,11,73,1,10,5),(4,2,32,78,2,3,5),(1,3,46,74,3,4,2),(3,1,33,98,1,11,4);
 
+CREATE TABLE IF NOT EXISTS `Class_Ratings` (
+  `id` mediumint NOT NULL auto_increment,
+  `class` mediumint default NULL,
+  `professorid` mediumint default NULL,
+  `department` mediumint default NULL,
+  FOREIGN KEY (`department`) REFERENCES Departments(`id`),
+  FOREIGN KEY (`class`) REFERENCES Class_TA(`id`),
+  FOREIGN KEY (`professorid`) REFERENCES Professors(`id`),
+  PRIMARY KEY (`id`)
+)AUTO_INCREMENT=1;
+
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (101,41,3),(121,30,3),(106,23,4),(104,26,1),(111,47,4),(114,9,3),(122,3,4),(102,13,1),(124,25,2),(100,21,3);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (125,33,4),(117,43,3),(103,38,2),(117,24,2),(119,3,4),(116,20,3),(119,28,3),(124,10,2),(117,32,3),(101,45,1);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (110,39,4),(120,9,1),(120,18,3),(111,36,4),(111,3,4),(116,18,4),(105,16,3),(103,22,2),(112,21,1),(115,25,2);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,2,4),(104,12,2),(107,2,4),(109,11,3),(108,22,2),(124,37,2),(110,30,4),(124,31,4),(113,5,2),(104,8,4);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (112,44,2),(109,39,1),(122,28,2),(123,48,2),(110,9,1),(118,42,3),(114,11,3),(114,32,4),(101,3,1),(102,19,4);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (111,39,3),(104,38,2),(103,33,4),(103,48,2),(106,3,4),(113,21,4),(105,34,1),(106,44,3),(117,37,4),(111,27,1);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (108,15,4),(122,39,1),(111,38,2),(105,9,4),(115,14,1),(108,11,1),(125,10,1),(106,28,4),(114,31,3),(125,41,1);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (116,9,2),(117,23,2),(121,27,1),(112,13,2),(120,14,4),(117,22,1),(114,15,4),(100,45,2),(122,49,1),(118,18,3);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (121,30,4),(107,29,2),(116,26,3),(119,10,1),(121,40,2),(125,20,1),(100,39,4),(102,19,1),(104,39,1),(117,33,1);
+INSERT INTO `Class_Ratings` (`class`,`professorid`,`department`) VALUES (102,45,4),(110,36,4),(121,19,1),(109,33,1),(125,15,3),(125,48,4),(104,2,3),(112,13,3),(115,16,2),(122,20,3);
