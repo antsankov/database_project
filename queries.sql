@@ -30,3 +30,20 @@ SELECT *
 FROM FCQs AS class , Department_FCQs AS dep
 WHERE class.department = dep.department AND class.avg_respect = dep.avg_respect
 GROUP BY class.department
+
+--QUERY 6: This finds the most expensive book for classes that are smaller than 25 people. 
+
+SELECT *
+FROM Book_Info AS book, FCQs AS fcq
+WHERE fcq.avg_class_size < 25 AND fcq.class = book.class
+GROUP BY fcq.avg_class_size
+HAVING MAX(book.price)
+
+--QUERY 11: This creates a user named 'test1' with the password: '123'. This user only has access to our school database
+
+CREATE USER 'test1'@'localhost' IDENTIFIED BY '123';GRANT USAGE ON *.* TO 'test1'@'localhost' IDENTIFIED BY '123' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;GRANT ALL PRIVILEGES ON `school`.* TO 'test1'@'localhost';
+
+--QUERY 12: This drops the previously created user. 
+
+DROP USER 'test1'@'localhost';
+
