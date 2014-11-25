@@ -34,6 +34,17 @@ GROUP BY class.department
 
 	--QUERY 6 : Select from where group by having
 	--QUERY 7 : select from where bwith two implied joins, a max function, an avg function, two levels of embedded parenthesis
+SELECT MAX( F.percent_passing_grades ) 
+FROM Department_FCQs AS F
+WHERE (
+	SELECT AVG( F.percent_passing_grades ) 
+	FROM Class_Ratings AS C, Departments AS D, Department_FCQs AS F
+	WHERE (C.department = D.id)AND (C.department = F.department)
+) >=75
+
+
+
+
 	--QUERY 8: select from where with a not operator and an in operator
 	--QUERY :
 	--QUERY :
