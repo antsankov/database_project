@@ -39,6 +39,14 @@ WHERE fcq.avg_class_size < 25 AND fcq.class = book.class
 GROUP BY fcq.avg_class_size
 HAVING MAX(book.price)
 
+
+
+--QUERY 10: Doubles the price of any books that cost less than 100 and belong to a class that has a title of less than 110. 
+
+UPDATE Book_Info 
+SET price = (price*2)
+WHERE price < 100 AND class < 110;
+
 --QUERY 11: This creates a user named 'test1' with the password: '123'. This user only has access to our school database
 
 CREATE USER 'test1'@'localhost' IDENTIFIED BY '123';GRANT USAGE ON *.* TO 'test1'@'localhost' IDENTIFIED BY '123' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;GRANT ALL PRIVILEGES ON `school`.* TO 'test1'@'localhost';
@@ -46,4 +54,10 @@ CREATE USER 'test1'@'localhost' IDENTIFIED BY '123';GRANT USAGE ON *.* TO 'test1
 --QUERY 12: This drops the previously created user. 
 
 DROP USER 'test1'@'localhost';
+
+--QUERY 13: This will remove all books that cost more than 150, and then rollback. 
+
+START TRANSACTION; 
+DELETE FROM Book_Info WHERE price > 150;
+ROLLBACK;
 
