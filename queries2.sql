@@ -46,6 +46,16 @@ WHERE (
 
 
 	--QUERY 8: select from where with a not operator and an in operator
+	SELECT *
+	FROM Construction_Plans
+	WHERE (current_build_cost > projected_build_cost) AND company NOT IN 
+		("Orci Tincidunt PC",
+"Quis Foundation",
+"Dis Parturient Montes PC",
+"Ipsum Corp.",
+"Aliquam Nisl Industries",
+"Risus Nunc LLC");
+		
 	--QUERY :
 	--QUERY :
 	--QUERY :
