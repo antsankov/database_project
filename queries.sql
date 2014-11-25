@@ -39,7 +39,28 @@ WHERE fcq.avg_class_size < 25 AND fcq.class = book.class
 GROUP BY fcq.avg_class_size
 HAVING MAX(book.price)
 
+--QUERY 7 : select from where bwith two implied joins, a max function, an avg function, two levels of embedded parenthesis
 
+SELECT MAX( F.percent_passing_grades ) 
+FROM Department_FCQs AS F
+WHERE (
+	SELECT AVG( F.percent_passing_grades ) 
+	FROM Class_Ratings AS C, Departments AS D, Department_FCQs AS F
+	WHERE (C.department = D.id)AND (C.department = F.department)
+) >=75
+
+--QUERY 8: select from where with a not operator and an in operator
+SELECT *
+FROM Construction_Plans
+WHERE (current_build_cost > projected_build_cost) AND company NOT IN 
+	("Orci Tincidunt PC",
+	"Quis Foundation",
+	"Dis Parturient Montes PC",
+	"Ipsum Corp.",
+	"Aliquam Nisl Industries",
+	"Risus Nunc LLC");
+
+--QUERY 9: SET with nontrivial where. TODO
 
 --QUERY 10: Doubles the price of any books that cost less than 100 and belong to a class that has a title of less than 110. 
 
