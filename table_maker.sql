@@ -82,6 +82,8 @@ CREATE TABLE IF NOT EXISTS `Students` (
   `major` mediumint default NULL,
   `minor` mediumint default NULL,
   `status` mediumint default NULL,
+  FOREIGN KEY (`major`) REFERENCES Major_Advisor_Info(`id`),
+  FOREIGN KEY (`minor`) REFERENCES Major_Advisor_Info(`id`),
   `gpa` varchar(100),
   PRIMARY KEY (`id`)
 ) AUTO_INCREMENT=1;
